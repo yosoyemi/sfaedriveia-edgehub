@@ -1,20 +1,18 @@
 <!-- src/App.vue -->
 <template>
   <div id="app">
-    <!-- Renderiza las rutas -->
+    <NavBar />
     <router-view />
   </div>
 </template>
 
 <script setup>
-// No es necesario importar nada aquí para el router-view
+import NavBar from './components/NavBar.vue'
 </script>
 
 <style scoped>
+/* Ajuste para que el contenido no quede debajo del navbar si es sticky */
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding-top: 80px; /* Depende de la altura de tu navbar */
 }
 </style>

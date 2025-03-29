@@ -1,0 +1,138 @@
+/* src/assets/main.css */
+
+/* Reseteo básico + tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #5145ff;        /* Color principal */
+    --secondary-color: #ffffff;      /* Fondo de tarjetas */
+    --accent-color: #f9f9f9;         /* Fondo secundario */
+    --text-color: #333;
+    --bg-color: #f0f2f5;
+    --border-radius: 10px;
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  
+  /* Body y contenedor principal */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  #app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Enlaces */
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #4136cc;
+  }
+  
+  /* Botones */
+  button {
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.25s;
+  }
+  button:hover {
+    background-color: #4136cc;
+    transform: translateY(-1px);
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 3px auto -webkit-focus-ring-color;
+  }
+  
+  /* Tarjetas */
+  .card {
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .card:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  /* Títulos */
+  h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Tablas */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.8rem;
+    border-bottom: 1px solid #ccc;
+  }
+  th {
+    background-color: #eee;
+    font-weight: 600;
+  }
+  
+  /* Layouts y contenedores extra */
+  .container {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  
+  /* NavBar - Estilo profesional con fondo blanco, sombra y logo */
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    z-index: 10;
+    justify-content: space-between;
+  }
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo {
+    height: 40px;
+  }
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .nav-right a {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-right a:hover {
+    color: #666;
+    text-decoration: underline;
+  }
+  
